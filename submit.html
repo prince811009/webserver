@@ -10,7 +10,7 @@
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NSJHXC');</script>
+  })(window,document,'script','dataLayer','GTM-PVG3LF5');</script>
   <!-- End Google Tag Manager -->
 
   <!-- style.css -->
@@ -27,7 +27,7 @@
   <!-- End Google Tag Manager (noscript) -->
   
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Turing Digital</a>
+    <a class="navbar-brand" href="./index.html">Turing Digital</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -52,25 +52,79 @@
   </nav>
 
   <div class="card col-md-9 my-5 mx-auto">
-    <div class="card-header bg-white">
-      Order successfully completed!
-    </div>
+    <p class="card-header bg-white text-danger">付款及運送資訊</p>
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <h5 class="card-title">收款人資訊</h5>
       <form>
         <div class="form-group row">
-          <label for="staticUserID" class="col-sm-2 col-form-label">UserID</label>
+          <label for="inputName" class="col-sm-2 col-form-label">收件者姓名</label>
           <div class="col-sm-10">
-            <input type="text" readonly class="form-control-plaintext" id="staticUserID" value="sdfghjfd2346">
+            <input type="name" class="form-control" id="inputName" placeholder="name">
           </div>
-          <label for="staticPrice" class="col-sm-2 col-form-label">Price</label>
+        </div>
+        <div class="form-group row">
+          <label for="inputNumber" class="col-sm-2 col-form-label">收件者手機</label>
           <div class="col-sm-10">
-            <input type="text" readonly class="form-control-plaintext" id="staticPrice" value="10000">
+            <input type="number" class="form-control" id="inputNumber" placeholder="phone number">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputAddress" class="col-sm-2 col-form-label">收件者地址</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputAddress" placeholder="address">
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">指定收件時間</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  無
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  上午
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  下午
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <h5 class="card-title">付款資訊</h5>
+        <div class="form-group row">
+          <label for="inputCardNumber" class="col-sm-2 col-form-label">信用卡卡號</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="inputCardNumber" placeholder="Card Number">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputDate" class="col-sm-2 col-form-label">信用卡有效期限</label>
+          <div class="col-sm-10">
+            <input type="datetime" class="form-control" id="inputDate" placeholder="MM/YY">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputCVC" class="col-sm-2 col-form-label">CVC</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="inputCVC" placeholder="CVC">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-info" formaction="./payment.html">上一步</button>
+            <button type="submit" class="btn btn-danger" formaction="./finished.html">確認送出</button>
           </div>
         </div>
       </form>
-      <a href="./index.html" class="btn btn-danger my-3 mx-auto">Submit</a>
     </div>
   </div>
 
