@@ -7,11 +7,11 @@
   <title>TuringDigital</title>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NSJHXC');</script>
-    <!-- End Google Tag Manager -->
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NSJHXC');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- style.css -->
   <!-- <link rel="stylesheet" href="./css/style.css"> -->
@@ -55,75 +55,68 @@
     <p class="card-header bg-white text-danger">付款及運送資訊</p>
     <div class="card-body">
       <h5 class="card-title">收款人資訊</h5>
-      <form>
-        <div class="form-group row">
-          <label for="inputName" class="col-sm-2 col-form-label">收件者姓名</label>
-          <div class="col-sm-10">
-            <input type="name" class="form-control" id="inputName" placeholder="name">
+      <form class="was-validated">
+        <div class="mb-3">
+          <label for="inputName">收件者姓名</label>
+          <input type="text" class="form-control is-valid" id="inputName" placeholder="name" required>
+          <div class="invalid-feedback">
+            It is required.
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputNumber" class="col-sm-2 col-form-label">收件者手機</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="inputNumber" placeholder="phone number">
+        <div class="mb-3">
+          <label for="inputnNumber">收件者電話</label>
+          <input type="text" class="form-control is-valid" id="inputnNumber" placeholder="number" required>
+          <div class="invalid-feedback">
+            It is required.
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputAddress" class="col-sm-2 col-form-label">收件者地址</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputAddress" placeholder="address">
-          </div>
+        <div class="form-group">
+          <label for="formGroup1">送貨時段</label>
+          <select class="custom-select" id="formGroup1" required>
+            <option value="">選擇時段</option>
+            <option value="1">上午</option>
+            <option value="2">下午</option>
+            <option value="3">晚上</option>
+          </select>
+          <div class="invalid-feedback">Please choose an answer</div>
         </div>
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">指定收件時間</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                <label class="form-check-label" for="gridRadios1">
-                  無
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                <label class="form-check-label" for="gridRadios2">
-                  上午
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                <label class="form-check-label" for="gridRadios2">
-                  下午
-                </label>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        <h5 class="card-title">付款資訊</h5>
-        <div class="form-group row">
-          <label for="inputCardNumber" class="col-sm-2 col-form-label">信用卡卡號</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="inputCardNumber" placeholder="Card Number">
-          </div>
+        <div class="form-group">
+          <label for="formGroup2">運送方式</label>
+          <select class="custom-select" id="formGroup2" required>
+            <option value="">選擇方式</option>
+            <option value="1">超商貨到付款</option>
+            <option value="2">宅配到府</option>
+            <option value="3">面交</option>
+          </select>
+          <div class="invalid-feedback">Please choose an answer</div>
         </div>
-        <div class="form-group row">
-          <label for="inputDate" class="col-sm-2 col-form-label">信用卡有效期限</label>
-          <div class="col-sm-10">
-            <input type="datetime" class="form-control" id="inputDate" placeholder="MM/YY">
-          </div>
+      <h5 class="card-title">付款方式</h5>
+      <div class="form-group">
+        <label for="formGroup3">支付方式</label>
+        <select class="custom-select" id="formGroup3" required>
+          <option value="">選擇方式</option>
+          <option value="1">信用卡支付</option>
+          <option value="2">支付寶</option>
+          <option value="3">Line 支付</option>
+        </select>
+        <div class="invalid-feedback">Please choose an answer</div>
+      </div>
+      <div class="form-group">
+        <label for="formGroup4">發票寄送</label>
+        <select class="custom-select" id="formGroup4" required>
+          <option value="">選擇方式</option>
+          <option value="1">電子發票</option>
+          <option value="2">個人憑證</option>
+          <option value="3">發票捐贈</option>
+        </select>
+        <div class="invalid-feedback">Please choose an answer</div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-info" formaction="./payment.html">上一步</button>
+          <button type="submit" class="btn btn-danger" formaction="./finished.html">確認送出</button>
         </div>
-        <div class="form-group row">
-          <label for="inputCVC" class="col-sm-2 col-form-label">CVC</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="inputCVC" placeholder="CVC">
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-10">
-            <button type="submit" class="btn btn-info" formaction="./payment.html">上一步</button>
-            <button type="submit" class="btn btn-danger" formaction="./finished.html">確認送出</button>
-          </div>
-        </div>
+      </div>
       </form>
     </div>
   </div>
