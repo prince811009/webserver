@@ -7,4 +7,4 @@ Once the small segment of Tag Manager code has been added to your project, you c
 
 ## See also
 - [Goole Tag Manager](https://marketingplatform.google.com/about/tag-manager/)
-- [tagmanager](https://support.google.com/tagmanager/answer/6102821)
+- [Tag Manager](https://support.google.com/tagmanager/answer/6102821)
